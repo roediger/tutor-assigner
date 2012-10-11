@@ -10,19 +10,15 @@ require 'time'
 require 'data_mapper'
 require 'pony'
 
+require './config.rb'
 
-BASE_URL="http://localhost:4567"
-PONY_OPTS={
-  :from => "Tutor Assigner <muehe@in.tum.de>"
-}
 
 class App < Sinatra::Base
   set :root, File.dirname(__FILE__)
   register Sinatra::AssetPack
   
-  #DataMapper::Model.raise_on_save_failure = true
-  DataMapper::Logger.new(STDOUT, :debug)
   DataMapper.setup(:default,"sqlite://#{Dir.pwd}/assigner.db")
+
 
   class Registration
     include DataMapper::Resource
@@ -96,7 +92,7 @@ class App < Sinatra::Base
     @title=reg.title
     
     reg.tutors.each do |tutor|      
-      @url=BASE_URL+"/vote/"+tutor.tutorhash
+      @url=CONFIG[:baseurl]+"/vote/"+tutor.tutorhash
       Pony.mail PONY_OPTS.merge({ 
         :to => "muehe@in.tum.de",
         :subject => "Tutorial Assignment for #{reg.title} #{tutor.email}",
@@ -105,11 +101,15 @@ class App < Sinatra::Base
       break;
     end
   end
-      
+
+  get '/' do
+    redirect '/register'
+  end
+
   get '/register' do
     erb :register
   end
-  
+
   post '/register' do
     hash=hashThis(params.flatten(10).join(","))
     reg=Registration.first_or_create(:reghash=>hash)
@@ -130,8 +130,8 @@ class App < Sinatra::Base
     reg.save
     
     @title=reg.title
-    @url=BASE_URL+"/manage/"+hash
-    Pony.mail PONY_OPTS.merge({
+    @url=CONFIG[:baseurl]+"/manage/"+hash
+    Pony.mail CONFIG[:pony_opts].merge({
       :to => reg.email,
       :subject => "Tutorial Assignment for #{reg.title}",
       :body => erb(:email_register)
