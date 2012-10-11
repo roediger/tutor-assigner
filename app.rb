@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'sinatra'
+require 'sinatra/base'
 require 'sinatra/assetpack'
 require 'erb'
 require 'coffee_script'
@@ -141,6 +141,6 @@ class App < Sinatra::Base
     hash
   end
   
-  run! if app_file == $0
+  run!
 end
 
