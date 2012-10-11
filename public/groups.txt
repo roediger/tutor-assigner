@@ -1,0 +1,1469 @@
+
+0000000010 Tutorübungen zu Grundlagen: Datenbanken (IN0008) (2SWS UE, WS 2012/13)	 	Hilfe		
+Lehrveranstaltungstermine
+Lehrveranstaltung	
+Termine	neuer Einzeltermin neue Terminserie Export Drucken Termine zwischen LV-Gruppen tauschen Termine zwischen LV (-Gruppen) kopieren
+Gruppen/Teilnehmer	Teilnehmerverwaltung - Gruppenliste Termine und/oder Gruppen aus Vorjahr kopieren
+Teilbeurteilungen	Konfigurieren
+Ansicht	Info zu Emailbenachrichtigung Einstellungen
+0000000010 Tutorübungen zu Grundlagen: Datenbanken (IN0008) (2SWS UE, WS 2012/13)
+		
+Gruppe 
+Tag	
+Datum 
+von 
+bis 
+Ort 
+Ereignis 
+Termintyp 
+Info	 Anmerkung	 interne Bemerkung	 Serie	ZT
+	  
+	Gruppe 1
+ 		
+Mo
+15.10.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+22.10.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+29.10.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+05.11.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+12.11.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+19.11.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+26.11.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+03.12.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+10.12.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+17.12.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+07.01.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+14.01.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+21.01.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+28.01.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+04.02.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+	Gruppe 10
+ 		
+Mi
+24.10.2012	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+31.10.2012	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+07.11.2012	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+14.11.2012	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+21.11.2012	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+28.11.2012	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+05.12.2012	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+12.12.2012	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+19.12.2012	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+09.01.2013	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+16.01.2013	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+23.01.2013	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+30.01.2013	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+06.02.2013	08:00	10:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+	Gruppe 11
+ 		
+Mi
+24.10.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+31.10.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+07.11.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+14.11.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+21.11.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+28.11.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+05.12.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+12.12.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+19.12.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+09.01.2013	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+16.01.2013	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+23.01.2013	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+30.01.2013	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+06.02.2013	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+	Gruppe 12
+ 		
+Mi
+24.10.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+31.10.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+07.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+14.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+21.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+28.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+05.12.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+12.12.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+19.12.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+09.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+16.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+23.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+30.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+06.02.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+	Gruppe 13
+ 		
+Mi
+24.10.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+31.10.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+07.11.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+14.11.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+21.11.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+28.11.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+05.12.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+12.12.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+19.12.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+09.01.2013	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+16.01.2013	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+23.01.2013	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+30.01.2013	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Mi
+06.02.2013	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+	Gruppe 14
+ 		
+Mi
+24.10.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+31.10.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+07.11.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+14.11.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+21.11.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+28.11.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+05.12.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+12.12.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+19.12.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+09.01.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+16.01.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+23.01.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+30.01.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mi
+06.02.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+	Gruppe 15
+ 		
+Do
+25.10.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+08.11.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+15.11.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+22.11.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+29.11.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+13.12.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+20.12.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+10.01.2013	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+17.01.2013	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+24.01.2013	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+31.01.2013	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+07.02.2013	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+	Gruppe 16
+ 		
+Do
+25.10.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+08.11.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+15.11.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+22.11.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+29.11.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+13.12.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+20.12.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+10.01.2013	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+17.01.2013	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+24.01.2013	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+31.01.2013	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+07.02.2013	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+	Gruppe 17
+ 		
+Do
+25.10.2012	12:00	14:00	03.07.023, Seminarraum (5607.03.023)	Abhaltung	fix				S	
+ 		
+Do
+08.11.2012	12:00	14:00	03.07.023, Seminarraum (5607.03.023)	Abhaltung	fix				S	
+ 		
+Do
+15.11.2012	12:00	14:00	03.07.023, Seminarraum (5607.03.023)	Abhaltung	fix				S	
+ 		
+Do
+22.11.2012	12:00	14:00	03.07.023, Seminarraum (5607.03.023)	Abhaltung	fix				S	
+ 		
+Do
+29.11.2012	12:00	14:00	03.07.023, Seminarraum (5607.03.023)	Abhaltung	fix				S	
+ 		
+Do
+13.12.2012	12:00	14:00	03.07.023, Seminarraum (5607.03.023)	Abhaltung	fix				S	
+ 		
+Do
+20.12.2012	12:00	14:00	03.07.023, Seminarraum (5607.03.023)	Abhaltung	fix				S	
+ 		
+Do
+10.01.2013	12:00	14:00	03.07.023, Seminarraum (5607.03.023)	Abhaltung	fix				S	
+ 		
+Do
+17.01.2013	12:00	14:00	03.07.023, Seminarraum (5607.03.023)	Abhaltung	fix				S	
+ 		
+Do
+24.01.2013	12:00	14:00	03.07.023, Seminarraum (5607.03.023)	Abhaltung	fix				S	
+ 		
+Do
+31.01.2013	12:00	14:00	03.07.023, Seminarraum (5607.03.023)	Abhaltung	fix				S	
+ 		
+Do
+07.02.2013	12:00	14:00	03.07.023, Seminarraum (5607.03.023)	Abhaltung	fix				S	
+	Gruppe 18
+ 		
+Do
+25.10.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+08.11.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+15.11.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+22.11.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+29.11.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+13.12.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+20.12.2012	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+10.01.2013	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+17.01.2013	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+24.01.2013	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+31.01.2013	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+07.02.2013	14:00	16:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+	Gruppe 19
+ 		
+Do
+25.10.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+08.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+15.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+22.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+29.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+13.12.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+20.12.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+10.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+17.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+24.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+31.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+07.02.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+	Gruppe 2
+ 		
+Mo
+15.10.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+22.10.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+29.10.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+05.11.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+12.11.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+19.11.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+26.11.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+03.12.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+10.12.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+17.12.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+07.01.2013	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+14.01.2013	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+21.01.2013	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+28.01.2013	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+04.02.2013	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+	Gruppe 20
+ 		
+Do
+25.10.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+08.11.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+15.11.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+22.11.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+29.11.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+13.12.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+20.12.2012	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+10.01.2013	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+17.01.2013	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+24.01.2013	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+31.01.2013	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Do
+07.02.2013	16:00	18:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+	Gruppe 21
+ 		
+Do
+25.10.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+08.11.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+15.11.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+22.11.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+29.11.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+13.12.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+20.12.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+10.01.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+17.01.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+24.01.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+31.01.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Do
+07.02.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+	Gruppe 22
+ 		
+Fr
+26.10.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+02.11.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+09.11.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+16.11.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+23.11.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+30.11.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+07.12.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+14.12.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+21.12.2012	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+11.01.2013	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+18.01.2013	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+25.01.2013	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+01.02.2013	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+08.02.2013	10:00	12:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+	Gruppe 23
+ 		
+Fr
+26.10.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+02.11.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+09.11.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+16.11.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+23.11.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+30.11.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+07.12.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+14.12.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+21.12.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+11.01.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+18.01.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+25.01.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+01.02.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+08.02.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+	Gruppe 24
+ 		
+Fr
+26.10.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+02.11.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+09.11.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+16.11.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+23.11.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+30.11.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+07.12.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+14.12.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+21.12.2012	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+11.01.2013	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+18.01.2013	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+25.01.2013	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+01.02.2013	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+ 		
+Fr
+08.02.2013	12:00	14:00	00.08.036, Tutor (5608.EG.036)	Abhaltung	fix				S	
+	Gruppe 25
+ 		
+Fr
+26.10.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+02.11.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+09.11.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+16.11.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+23.11.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+30.11.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+07.12.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+14.12.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+21.12.2012	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+11.01.2013	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+18.01.2013	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+25.01.2013	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+01.02.2013	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Fr
+08.02.2013	12:00	14:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+	Gruppe 26
+ 		
+Mi
+24.10.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+31.10.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+07.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+14.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+21.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+28.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+05.12.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+12.12.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+19.12.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+09.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+16.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+23.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+30.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+06.02.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+	Gruppe 27
+ 		
+Mi
+24.10.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+31.10.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+07.11.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+14.11.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+21.11.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+28.11.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+05.12.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+12.12.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+19.12.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+09.01.2013	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+16.01.2013	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+23.01.2013	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+30.01.2013	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+06.02.2013	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+	Gruppe 28
+ 		
+Mi
+24.10.2012	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+31.10.2012	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+07.11.2012	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+14.11.2012	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+21.11.2012	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+28.11.2012	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+05.12.2012	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+12.12.2012	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+19.12.2012	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+09.01.2013	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+16.01.2013	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+23.01.2013	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+30.01.2013	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Mi
+06.02.2013	16:00	18:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+	Gruppe 29
+ 		
+Do
+25.10.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+08.11.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+15.11.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+22.11.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+29.11.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+13.12.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+20.12.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+10.01.2013	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+17.01.2013	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+24.01.2013	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+31.01.2013	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+07.02.2013	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+	Gruppe 3
+ 		
+Mo
+22.10.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+29.10.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+05.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+12.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+19.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+26.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+03.12.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+10.12.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+17.12.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+07.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+14.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+21.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+28.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+04.02.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+	Gruppe 30
+ 		
+Do
+25.10.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+08.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+15.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+22.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+29.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+13.12.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+20.12.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+10.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+17.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+24.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+31.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+07.02.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+	Gruppe 31
+ 		
+Do
+25.10.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+08.11.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+15.11.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+22.11.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+29.11.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+13.12.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+20.12.2012	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+10.01.2013	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+17.01.2013	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+24.01.2013	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+31.01.2013	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+07.02.2013	14:00	16:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+	Gruppe 32
+ 		
+Do
+25.10.2012	08:00	10:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+08.11.2012	08:00	10:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+15.11.2012	08:00	10:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+22.11.2012	08:00	10:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+29.11.2012	08:00	10:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+13.12.2012	08:00	10:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+20.12.2012	08:00	10:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+10.01.2013	08:00	10:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+17.01.2013	08:00	10:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+24.01.2013	08:00	10:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+31.01.2013	08:00	10:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Do
+07.02.2013	08:00	10:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+	Gruppe 33
+ 		
+Fr
+26.10.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+02.11.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+09.11.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+16.11.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+23.11.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+30.11.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+07.12.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+14.12.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+21.12.2012	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+11.01.2013	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+18.01.2013	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+25.01.2013	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+01.02.2013	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+08.02.2013	10:00	12:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+	Gruppe 34
+ 		
+Fr
+26.10.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+02.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+09.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+16.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+23.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+30.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+07.12.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+14.12.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+21.12.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+11.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+18.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+25.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+01.02.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Fr
+08.02.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+	Gruppe 35
+ 		
+Di
+23.10.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Di
+30.10.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Di
+06.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Di
+13.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Di
+20.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Di
+27.11.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Di
+04.12.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Di
+11.12.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Di
+18.12.2012	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Di
+08.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Di
+15.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Di
+22.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Di
+29.01.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+ 		
+Di
+05.02.2013	12:00	14:00	02.09.014, Seminarraum (5609.02.014)	Abhaltung	fix				S	
+	Gruppe 4
+ 		
+Mo
+22.10.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+29.10.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+05.11.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+12.11.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+19.11.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+26.11.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+03.12.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+10.12.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+17.12.2012	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+07.01.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+14.01.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+21.01.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+28.01.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Mo
+04.02.2013	16:00	18:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+	Gruppe 5
+ 		
+Di
+23.10.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+30.10.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+06.11.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+13.11.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+20.11.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+27.11.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+04.12.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+11.12.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+18.12.2012	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+08.01.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+15.01.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+22.01.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+29.01.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+05.02.2013	10:00	12:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+	Gruppe 6
+ 		
+Di
+23.10.2012	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+30.10.2012	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+06.11.2012	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+13.11.2012	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+20.11.2012	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+27.11.2012	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+04.12.2012	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+11.12.2012	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+18.12.2012	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+08.01.2013	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+15.01.2013	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+22.01.2013	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+29.01.2013	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+05.02.2013	10:00	12:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+	Gruppe 7
+ 		
+Di
+23.10.2012	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+30.10.2012	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+06.11.2012	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+13.11.2012	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+20.11.2012	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+27.11.2012	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+04.12.2012	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+11.12.2012	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+18.12.2012	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+08.01.2013	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+15.01.2013	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+22.01.2013	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+29.01.2013	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+ 		
+Di
+05.02.2013	12:00	14:00	00.08.059, Tutor (5608.EG.059)	Abhaltung	fix				S	
+	Gruppe 8
+ 		
+Di
+23.10.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+30.10.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+06.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+13.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+20.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+27.11.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+04.12.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+11.12.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+18.12.2012	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+08.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+15.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+22.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+29.01.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+ 		
+Di
+05.02.2013	14:00	16:00	00.08.053, Praktikumsraum (5608.EG.053)	Abhaltung	fix				S	
+	Gruppe 9
+ 		
+Di
+23.10.2012	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+ 		
+Di
+30.10.2012	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+ 		
+Di
+06.11.2012	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+ 		
+Di
+13.11.2012	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+ 		
+Di
+20.11.2012	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+ 		
+Di
+27.11.2012	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+ 		
+Di
+04.12.2012	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+ 		
+Di
+11.12.2012	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+ 		
+Di
+18.12.2012	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+ 		
+Di
+08.01.2013	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+ 		
+Di
+15.01.2013	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+ 		
+Di
+22.01.2013	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+ 		
+Di
+29.01.2013	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+ 		
+Di
+05.02.2013	12:00	14:00	00.08.055, Tutor (5608.EG.055)	Abhaltung	fix				S	
+Löschen Absagen Bearbeiten Kopieren
+
+
+©2012 Technische Universität München. Alle Rechte vorbehalten. | TUMonline powered by CAMPUSonline® | Impressum | Feedback

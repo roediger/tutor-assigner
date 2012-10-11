@@ -1,0 +1,69 @@
+<%= erb :head %>
+<%= erb :navigation %>
+    
+<div class="container-fluid">
+  
+  <div class="row-fluid">
+    <div class="span8 offset2" id="content">
+      
+      <h1> Register a new Tutor Assignment Problem </h1>
+      
+      <form>
+        <fieldset>
+        <legend>Personal data</legend>
+        
+        <div id="groupName" class="control-group">
+        <label>Name</label>
+        <div class="controls">
+          <input name="inputName" type="text" autocomplete="off" class="span8 required" minlength="5" id="inputName" placeholder="">
+          <span class="help-inline"></span>
+        </div>
+        </div>
+
+        <div id="groupTitle" class="control-group">
+        <label>Course Title</label>
+        <div class="controls">
+          <input name="inputTitle" type="text" class="span8 required" minlength="5" id="inputTitle">
+          <span class="help-inline"></span>
+        </div>
+        </div>
+
+        <div id="groupEmail" class="control-group">
+        <label>Email</label>
+        <div class="controls">
+          <input name="inputEmail" type="text" class="span8 required email" id="inputEmail">
+          <span class="help-inline"></span>
+        </div>
+        </div>
+
+        
+        <legend>Course data</legend>
+        
+        <div id="groupGroups" class="control-group">
+        <label>TUM Online Groups (<a href="javascript:false;" id="aGroupsExample">example</a>)</label>
+        <div class="controls">
+          <textarea name="inputGroups" rows="10" class="span8 required groupsRequired" id="inputGroups"></textarea>
+          <span class="help-inline"></span>
+        </div>
+        </div>
+        
+        <div id="groupTutors" class="control-group">
+        <label>Tutoren from Tutor-Tool (<a href="javascript:false;" id="aTutorsExample">example</a>)</label>
+        <div class="controls">
+          <textarea name="inputTutors" rows="10" class="span8 required tutorsRequired" id="inputTutors"></textarea>
+          <span class="help-inline"></span>
+        </div>
+        </div>
+        
+        <button type="button" class="btn btn-primary" data-loading-text="Registering...">Submit</button>
+        </fieldset>
+      </form>
+      
+    </div>
+  </div>
+  
+</div>
+
+<%= js :app %>
+<%= js :register %>
+<%= erb :foot %>

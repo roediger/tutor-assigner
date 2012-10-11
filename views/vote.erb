@@ -1,0 +1,37 @@
+<%= erb :head %>
+<%= erb :navigation %>
+
+<script>
+var name='<%=@name%>'
+var hash='<%=@hash%>';
+var groups=<%=@groups%>;
+var avail=<%=@avail.nil? ? "{}" : @avail %>;
+</script>
+    
+<div class="container-fluid">
+  
+  <div class="row-fluid">
+    <div class="span8 offset2">
+      
+      <h1> Vote in a Tutor Assignment Problem - <span id="name"></span> </h1>
+      
+      <p>Mark all slots which <strong>DO NOT</strong> work for you as red and submit.</p>
+      
+      <div id="calendar"></div>
+      
+      <p>        
+      <form>
+        <input type="submit" value="Submit">
+      </form>
+      </p>
+      
+      <span id="status"></span>
+      
+    </div>
+  </div>
+  
+</div>
+
+<%= js :app %>
+<%= js :vote %>
+<%= erb :foot %>

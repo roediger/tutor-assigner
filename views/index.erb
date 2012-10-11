@@ -1,0 +1,240 @@
+<%= erb :head %>
+<%= erb :navigation %>
+    
+<div class="container-fluid">
+  
+  <div class="row-fluid">
+    <div class="span4" id="config">
+      <textarea rows="20" id="tumonline" class="span12"></textarea>
+      
+      <div class="span12" id="tutors"></div>
+    </div>
+    
+    <div class="span8" id="result">
+    </div>
+  </div>
+  
+</div>
+
+<%= js :app %>
+  
+<script id="result-template" type="text/x-handlebars-template">
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th> Name </th>
+      <th> Day </th>
+      <th> Time </th>
+      <th> Tutor </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each groups}}
+    <tr>
+      {{#with this}}
+      <td>{{name}}</td>
+      <td>{{day}}</td>
+      <td>{{time}}</td>
+      <td>{{tutor}}</td>
+      {{/with}}
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</script>
+
+<script id="tutor-template" type="text/x-handlebars-template">
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th> Name </th>
+      <th> #Groups </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tutors}}
+    <tr>
+      {{#with this}}
+      <td><input type="text" class="input-large input-shallow" value="{{name}}" /></td>
+      <td><input type="text" class="input-small input-shallow" value="{{groupCount}}" /></td>
+      {{/with}}
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</script>  
+  
+  
+  <script>
+  $(function() {
+    var events=[];
+    
+    function findGroups(content) {
+      var lines=content.split("\n");
+      
+      var dayRegexp=/^(Mo|Di|Mi|Do|Fr)$/;
+      var groupRegexp=/^[a-zA-Z0-9 ]+$/;
+      var dateRegexp=/^[\s\t]*\d+\.\d+\.\d+[\t\s]+(\d+:\d+)/;
+      
+      var groups=[];
+      var currentGroup=false,currentDay=false,m=false,currentTime=false;
+      $.each(lines,function(index,line) {
+        line=line.trim();
+        if (line.match(dayRegexp)) {
+          currentDay=line;
+        } else if (line.match(groupRegexp)) {
+          currentGroup=line;
+          currentDay=false,currentTime=false;
+        } else if ((m=line.match(dateRegexp))) {
+          if (currentDay&&currentGroup&&!currentTime) {
+            currentTime=m[1];
+            groups.push({name: currentGroup, day: currentDay, time:currentTime, tutor: ""});
+          }
+        }
+      });
+      
+      return groups;
+    }
+    
+    function findSameSlot(groups) {
+      var slots={};
+      $.each(groups,function(groupIndex,group) {
+        var key=group.day+" "+group.time;
+        if (!slots[key]) { slots[key]=[]; }        
+        slots[key].push(groupIndex);
+      });
+      var arraySlots=[];
+      $.each(slots,function(index,slot) {
+        arraySlots.push(slot);
+      });
+      return arraySlots;
+    }        
+    
+    function dayToInt(day) {
+      if (day==="Mo") return 1;
+      if (day==="Di") return 2;
+      if (day==="Mi") return 3;
+      if (day==="Do") return 4;
+      if (day==="Fr") return 5;
+    }
+    
+    function run() {
+      var content=$("#tumonline").val();
+      var groups=findGroups(content);
+      //var template=Handlebars.compile($("#result-template").html());
+      //$("#result").html(template({groups: groups}));      
+      events=[]
+      $.each(groups,function(groupIndex,group) {
+        events.push({
+          id: groupIndex,
+          title: group.name,
+          start: new Date(2012,10-1,dayToInt(group.day),+group.time.split(":")[0]),
+          end: new Date(2012,10-1,dayToInt(group.day),+group.time.split(":")[0]+2),
+          allDay: false
+        });
+      });
+      
+      $('#result').fullCalendar( 'refetchEvents' )
+      console.log(findSameSlot(groups));
+    }
+    
+    
+    function buildTutors(count) {
+      var tutors=[];
+      for (var index=0;index<count;++index) {
+        tutors.push({name: "Tutor "+(index+1), groupCount: 2});
+      }
+      var template=Handlebars.compile($("#tutor-template").html());
+      $("#tutors").html(template({tutors: tutors}));      
+    }
+    
+    buildTutors(20);
+    $("#tumonline").change(run);
+    
+    
+    //   margin: 0;
+    // }
+    // 
+    // .alert .close {
+    //   position: relative;
+    //   top: -2px;
+    //   right: -21px;
+    //   line-height: 20px;
+    // }
+    // 
+    // .alert-success {
+    //   color: #468847;
+    //   background-color: #dff0d8;
+    //   border-color: #d6e9c6;
+    // }
+    // 
+    // .alert-danger,
+    // .alert-error {
+    //   color: #b94a48;
+    //   background-color: #f2dede;
+    //   border-color: #eed3d7;
+    // }
+    // 
+    // .alert-info {
+    //   color: #3a87ad;
+    //   background-color: #d9edf7;
+    //   border-color: #bce8f1;
+    // }
+    // 
+    // .alert-block {
+    // 
+    
+    function toggleEventColors(id) {
+      if (events[id].backgroundColor===undefined||events[id].backgroundColor!=='#f2dede') { 
+        events[id]['textColor']='#b94a48';
+        events[id]['backgroundColor']='#f2dede';
+        events[id]['borderColor']='#eed3d7';
+      } else {
+        events[id]['textColor']='#468847';
+        events[id]['backgroundColor']='#dff0d8';
+        events[id]['borderColor']='#d6e9c6';
+      }
+      $('#result').fullCalendar('refetchEvents');        
+    }
+
+		var d = 1;
+		var m = 10;
+		var y = 2012;
+
+		$('#result').fullCalendar({
+			header: {
+				left: '',
+				center: '',
+				right: ''
+			},
+      eventSources: [{ 
+        events: function(start,end,callback) {
+          callback(events);
+        },
+        textColor: '#468847',
+        backgroundColor: '#dff0d8',
+        borderColor: '#d6e9c6',
+      }],
+			defaultView: 'agendaWeek',
+			editable: false,
+			weekends: false,
+			firstDay: 1,
+			minTime: 7,
+			maxTime: 19,
+			allDaySlot: false,
+			timeFormat: {
+          agenda: 'H:mm{ - H:mm}', // 5:00 - 6:30
+          '': 'H(:mm)t'            // 7p
+      },
+      eventClick: function(calEvent, jsEvent, view) { 
+        toggleEventColors(calEvent.id);
+      },
+      columnFormat: {
+        week: 'ddd'
+      }
+		});		
+		$('#result').fullCalendar('gotoDate',y,m-1,d);
+  });
+  </script>
+    
+<%= erb :foot %>

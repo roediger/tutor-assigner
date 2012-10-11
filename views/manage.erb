@@ -1,0 +1,54 @@
+<%= erb :head %>
+<%= erb :navigation %>
+<script>
+  var tutors=<%=@tutors%>;
+</script>
+    
+<div class="container-fluid">
+  
+  <div class="row-fluid">
+    <div class="span8 offset2">
+      
+      <h1> Manage a Tutor Assignment Problem </h1>
+      
+      <script id="tutors-template" type="text/x-handlebars-template">
+      <table class="table table-condensed">
+        <thead>
+          <tr>
+            <th> Name </th>
+            <th> Email </th>
+            <th> Status </th>
+            <th> &nbsp; </th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each tutors}}
+          <tr>
+            {{#with this}}
+            <td>{{name}}</td>
+            <td>{{email}}</td>
+            <td>{{status}}</td>
+            <td><a href="/vote/{{tutorhash}}">vote</a></td>
+            {{/with}}
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      </script>
+      
+      <div id="tutors"></div>            
+
+      <p>
+        <button type="button" id="aEmailAll" class="btn btn-primary" data-loading-text="Emailing...">Email Everyone NOW</button>
+      </p>
+        
+      
+    </div>
+  </div>
+  
+</div>
+
+<%= js :app %>
+<%= js :manage %>
+<%= js :register %>
+<%= erb :foot %>
