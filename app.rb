@@ -14,6 +14,7 @@ require './config.rb'
 
 
 class App < Sinatra::Base
+  set :port, 9999
   set :root, File.dirname(__FILE__)
   register Sinatra::AssetPack
   
