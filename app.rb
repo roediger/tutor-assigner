@@ -182,8 +182,12 @@ class App < Sinatra::Base
         currentCluster[:groups] << group
       end
     end
-
-    p pairs
+    
+    pairs.each do |a,b|
+      tutors.each do |tutor|
+        cplex+= " + [ 1000 t#{tutor.id}g#{a} * t#{tutor.id}g#{b} ]"
+      end
+    end
     
     cplex+= "\n"
     cplex+= "Subject To\n"
@@ -252,21 +256,36 @@ class App < Sinatra::Base
     cplex+="Binary\n"
     cplex+=" "+vars.join(" ")+"\n"
     
-    IO.write("debug.lp",cplex)
-    out,solution,status=Open3.capture3("glpsol --lp /dev/stdin -o /dev/stderr",:stdin_data=>cplex)
-    IO.write("debug.sol",solution)
-    puts out
+    IO.write("out.lp",cplex)
+    
+    # out,solution,status=Open3.capture3("glpsol --lp /dev/stdin -o /dev/stderr",:stdin_data=>cplex)
+    # IO.write("debug.sol",solution)
+    # puts out
+    
+    out,err,status=Open3.capture3("gurobi_cl ResultFile=out.sol out.lp")
+    solution=IO.read("out.sol")
 
     result=Hash.new
     solution.split(/\n/).each do |line|
+      next unless line.match(/^t\d+.*?[\s\t]+1/)
+      
       cols=line.split(/[\s\t]+/)
-      if cols[3]=="*" and cols[4]=="1"
-        m=cols[2].match(/t(\d+)g(\d+)/)
-        t=m[1].to_i
-        g=m[2].to_i
-        result[Group.first(:id => g).name]=Tutor.first(:id => t).name
-      end
+      m=cols[0].match(/t(\d+)g(\d+)/)
+      t=m[1].to_i
+      g=m[2].to_i
+      result[Group.first(:id => g).name]=Tutor.first(:id => t).name
     end
+    p result
+    
+    # solution.split(/\n/).each do |line|
+    #   cols=line.split(/[\s\t]+/)
+    #   if cols[3]=="*" and cols[4]=="1"
+    #     m=cols[2].match(/t(\d+)g(\d+)/)
+    #     t=m[1].to_i
+    #     g=m[2].to_i
+    #     result[Group.first(:id => g).name]=Tutor.first(:id => t).name
+    #   end
+    # end
     
     content_type :json
     JSON.generate(result)
