@@ -146,7 +146,7 @@ class App < Sinatra::Base
     tutors=reg.tutors
     
     cplex = "Maximize\n"
-    cplex+= " obj: "
+    cplex+= " obj: - 1000000 slack1 "
     
     # Build objective function: add all variables while considering their weight
     tutors.each do |tutor|
@@ -158,8 +158,58 @@ class App < Sinatra::Base
       end
     end
     
+    # Add variables for consecutive groups
+    sorted_groups=groups.to_a.sort { |a,b| a.when <=> b.when }
+    sorted_groups << sorted_groups[0]
+    pairs=[]
+    lastCluster=nil
+    currentCluster=nil
+    sorted_groups.each do |group|      
+      currentCluster={ :when => group.when, :groups => [group] } if currentCluster.nil?
+      
+      if currentCluster[:when] != group.when then
+        # Next cluster
+        if lastCluster and lastCluster[:when]+(2.0/24.0) == currentCluster[:when] then
+          lastCluster[:groups].each do |l|
+            currentCluster[:groups].each do |c|
+              pairs << [l.id,c.id]
+            end
+          end
+        end
+        lastCluster=currentCluster
+        currentCluster={ :when => group.when, :groups => [group] }
+      else 
+        currentCluster[:groups] << group
+      end
+    end
+
+    p pairs
+    
     cplex+= "\n"
     cplex+= "Subject To\n"
+        
+    # Do not allow groups where preference is 0
+    cplex+= " nozero:"
+    tutors.each do |tutor|
+      groups.each do |group|
+        pref=tutor.preferences.first(:group => group)
+        weight=pref ? pref.weight : 0
+        
+        if weight == 0 then
+          cplex+= " + t#{tutor.id}g#{group.id}"          
+        end
+      end
+    end    
+    cplex+=" = 0\n"
+    
+    # Uber constraint
+    cplex+= " all:"
+    tutors.each do |tutor|
+      groups.each do |group|
+        cplex+= " + t#{tutor.id}g#{group.id}"
+      end    
+    end  
+    cplex+= " + slack1 = #{2*tutors.length}\n"
 
     # At most one tutor for each group
     groups.each do |group|
@@ -202,7 +252,10 @@ class App < Sinatra::Base
     cplex+="Binary\n"
     cplex+=" "+vars.join(" ")+"\n"
     
+    IO.write("debug.lp",cplex)
     out,solution,status=Open3.capture3("glpsol --lp /dev/stdin -o /dev/stderr",:stdin_data=>cplex)
+    IO.write("debug.sol",solution)
+    puts out
 
     result=Hash.new
     solution.split(/\n/).each do |line|
