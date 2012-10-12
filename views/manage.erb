@@ -2,6 +2,7 @@
 <%= erb :navigation %>
 <script>
   var tutors=<%=@tutors%>;
+  var groups=<%=@groups%>;
 </script>
     
 <div class="container-fluid">
@@ -39,9 +40,11 @@
       <div id="tutors"></div>            
 
       <p>
-        <button type="button" id="aEmailAll" class="btn btn-primary" data-loading-text="Emailing...">Email Everyone NOW</button>
-      </p>
-        
+        <button type="button" id="emailAll" class="btn btn-primary" data-loading-text="Emailing...">Email Everyone NOW</button>
+        <button type="button" id="solve" class="btn btn-primary" data-loading-text="Solving...">Solve</button>
+      </p>        
+      
+      <div id="calendar"></div>
       
     </div>
   </div>
@@ -50,5 +53,4 @@
 
 <%= js :app %>
 <%= js :manage %>
-<%= js :register %>
 <%= erb :foot %>
