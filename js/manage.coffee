@@ -8,16 +8,6 @@ y = 2012
 sortedTutors=tutors.sort (a,b)->
   return if a.name<b.name then -1 else 1
 
-for tutor in sortedTutors
-  tutor.available=JSON.parse(tutor.available)
-  tutor.status = if tutor.available
-    count = 0 
-    for key,value of tutor.available 
-      count++ if value=="true"
-    count
-  else 
-    0
-
 template=Handlebars.compile($("#tutors-template").html());
 $("#tutors").html(template({tutors: sortedTutors}));      
 
@@ -34,7 +24,6 @@ $("#solve").click ->
   .error ->
     $("#solve").button('reset')    
 
-
 $("#emailAll").click -> 
   $("#emailAll").button('loading')
   $.post window.location+'/email', {}, -> 
@@ -42,22 +31,14 @@ $("#emailAll").click ->
   .error ->
     $("#emailAll").button('reset')    
 
-dayToInt = (day) ->
-  switch day 
-    when "Mo" then 1
-    when "Di" then 2
-    when "Mi" then 3
-    when "Do" then 4
-    when "Fr" then 5
-
 # The events collection
 eventByName={}
-for index,group of groups
+for group in groups
   events.push
-    id: index
+    id: group.id
     title: group.name
-    start: new Date(2012,10-1,dayToInt(group.day),+group.time.split(":")[0])
-    end: new Date(2012,10-1,dayToInt(group.day),+group.time.split(":")[0]+2)
+    start: new Date(group.when)
+    end: new Date(group.when).add { hours: 2 }
     allDay: false
   eventByName[group.name]=events[events.length-1]
 

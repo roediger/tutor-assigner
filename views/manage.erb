@@ -8,7 +8,7 @@
 <div class="container-fluid">
   
   <div class="row-fluid">
-    <div class="span8 offset2">
+    <div class="span10 offset1">
       
       <h1> Manage a Tutor Assignment Problem </h1>
       
@@ -18,7 +18,7 @@
           <tr>
             <th> Name </th>
             <th> Email </th>
-            <th> Status </th>
+            <th> Avail. Groups </th>
             <th> &nbsp; </th>
           </tr>
         </thead>
@@ -28,8 +28,8 @@
             {{#with this}}
             <td>{{name}}</td>
             <td>{{email}}</td>
-            <td>{{status}}</td>
-            <td><a href="/vote/{{tutorhash}}">vote</a></td>
+            <td>{{gcount}}</td>
+            <td><a href="/vote/{{id}}/{{access_code}}">vote</a></td>
             {{/with}}
           </tr>
           {{/each}}

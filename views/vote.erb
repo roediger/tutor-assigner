@@ -2,10 +2,9 @@
 <%= erb :navigation %>
 
 <script>
-var name='<%=@name%>'
-var hash='<%=@hash%>';
-var groups=<%=@groups%>;
-var avail=<%=@avail.nil? ? "{}" : @avail %>;
+var tutor=<%=@tutor%>;
+var slots=<%=@slots%>;
+var prefs=<%=@prefs%>;
 </script>
     
 <div class="container-fluid">
@@ -17,9 +16,12 @@ var avail=<%=@avail.nil? ? "{}" : @avail %>;
       
       <p>Mark all slots which <strong>DO NOT</strong> work for you as red and submit. </p>
       
-      <p>Usually, every click
-        is automatically propagated back to the server, an indicator should show up once saving was successful.
-        You can come back any time as often as you want. DO NOT share the link, whoever has the link can vote for you.</p>
+      <p>
+        Usually, every click is automatically propagated back to the server, an
+        indicator should show up once saving was successful. You can come back any 
+        time as often as you want. DO NOT share the link, whoever has the link can 
+        vote for you.
+      </p>
         
       <div id="calendar"></div>
       

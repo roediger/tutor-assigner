@@ -1,63 +1,35 @@
 # All events
 events = []
-# A monday in the past used to offset all events
-d = 1
-m = 10
-y = 2012
+# Number of concurrent saves running
 savecount=0
 
-getSlot = (day,time) ->
-  day+" "+time  
-
-findSameSlot = (groups) ->
-  slots={}
-  for groupIndex,group of groups
-    slot=getSlot group.day, group.time
-    (slots[slot]||=[]).push groupIndex
-  groupArray for slot,groupArray of slots
-
-dayToInt = (day) ->
-  switch day 
-    when "Mo" then 1
-    when "Di" then 2
-    when "Mi" then 3
-    when "Do" then 4
-    when "Fr" then 5
-    
-toggleEventColors = (id) ->
-  if !events[id].backgroundColor || events[id].backgroundColor != '#ED4A4A'
-    events[id]['textColor']='#000000';
-    events[id]['backgroundColor']='#ED4A4A';
-    events[id]['borderColor']='#ED4A4A';
-    events[id].available=false
+colorEvent = (event) ->
+  if prefs and prefs[event.groups[0]] and prefs[event.groups[0]]==1
+    event['textColor']='#000000';
+    event['backgroundColor']='#5BB75B';
+    event['borderColor']='#5BB75B';
   else
-    events[id]['textColor']='#000000';
-    events[id]['backgroundColor']='#5BB75B';
-    events[id]['borderColor']='#5BB75B';
-    events[id].available=true
+    event['textColor']='#000000';
+    event['backgroundColor']='#ED4A4A';
+    event['borderColor']='#ED4A4A';  
   $('#calendar').fullCalendar('refetchEvents'); 
   
-handleSubmit = ->
-  newAvail={}
-  newAvail[event.slot]=event.available for event in events    
-  savecount++
+handleSubmit = ->  
   $("#status").html("Saving...")
-  $.post '/vote/'+hash,available: newAvail, -> savecount--; $("#status").html("Everything is saved.") if savecount==0
+  savecount++
+  $.post window.location, prefs: prefs, -> 
+    savecount--; $("#status").html("Everything is saved.") if savecount==0
   return false
       
 # The events collection
-for equalGroup in findSameSlot(groups)
-  group=groups[equalGroup[0]]
-  id=events.length
+for slot,groups of slots
   events.push
-    id: id
-    title: equalGroup.length+" groups"
-    slot: getSlot group.day, group.time
-    start: new Date(2012,10-1,dayToInt(group.day),+group.time.split(":")[0])
-    end: new Date(2012,10-1,dayToInt(group.day),+group.time.split(":")[0]+2)
+    title: groups.length+" groups"
+    start: new Date(slot)
+    end: new Date(slot).add { hours: 2 }
     allDay: false
-    available: avail[getSlot group.day, group.time]!="false"
-  toggleEventColors id if !events[id].available
+    groups: groups
+  colorEvent events[events.length-1]
     
 
 # Build calendar
@@ -66,10 +38,7 @@ $("#calendar").fullCalendar
     left: ''
     center: ''
     right: ''
-  events: events
-  eventBackgroundColor: '#5BB75B'
-  eventTextColor: '#000000'
-  eventBorderColor: '#5BB75B'  
+  events: events 
   defaultView: 'agendaWeek'
   editable: false
   weekends: false
@@ -80,12 +49,14 @@ $("#calendar").fullCalendar
   timeFormat:
     agenda: 'H:mm{ - H:mm}'
     '': 'H(:mm)t'
-  eventClick: (calEvent, jsEvent, view) -> 
-    toggleEventColors calEvent.id
+  eventClick: (calEvent,jsEvent,view) -> 
+    for groupId in calEvent.groups 
+      prefs[groupId]=if !prefs[groupId] or prefs[groupId]==0 then 1 else 0
+    colorEvent calEvent
     handleSubmit()
   columnFormat:
     week: 'ddd'    
-$('#calendar').fullCalendar 'gotoDate',y,m-1,d
+$('#calendar').fullCalendar 'gotoDate',2012,9,1
 
 $("form").submit handleSubmit
-$("#name").html name
+$("#name").html tutor.name
