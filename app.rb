@@ -149,6 +149,11 @@ class App < Sinatra::Base
     cplex+= " obj: - 1000000 slack1 "
     
     # Build objective function: add all variables while considering their weight
+    vars = tutors.product(groups).map { |var| { :tutor => var[0], :group => var[1], :pref => var[0].preferences.first(:group => var[1]) } }
+    vars.each do |var|
+      puts " #{var[:pref] ? var[:pref].weight : 0} #{var[:tutor].id} #{var[:group].id}" 
+    end
+    
     tutors.each do |tutor|
       groups.each do |group|
         pref=tutor.preferences.first(:group => group)
@@ -159,28 +164,11 @@ class App < Sinatra::Base
     end
     
     # Add variables for consecutive groups
-    sorted_groups=groups.to_a.sort { |a,b| a.when <=> b.when }
-    sorted_groups << sorted_groups[0]
     pairs=[]
-    lastCluster=nil
-    currentCluster=nil
-    sorted_groups.each do |group|      
-      currentCluster={ :when => group.when, :groups => [group] } if currentCluster.nil?
-      
-      if currentCluster[:when] != group.when then
-        # Next cluster
-        if lastCluster and lastCluster[:when]+(2.0/24.0) == currentCluster[:when] then
-          lastCluster[:groups].each do |l|
-            currentCluster[:groups].each do |c|
-              pairs << [l.id,c.id]
-            end
-          end
-        end
-        lastCluster=currentCluster
-        currentCluster={ :when => group.when, :groups => [group] }
-      else 
-        currentCluster[:groups] << group
-      end
+    lastCluster={ :slot => DateTime.now, :groups => [] }
+    groups.to_a.sort { |a,b| a.when<=>b.when }.chunk { |g| g.when }.each do |slot,groups|
+      pairs += lastCluster[:groups].product(groups) if lastCluster[:slot]+(2.0/24.0) == slot
+      lastCluster={ :slot => slot, :groups => groups }
     end
     
     pairs.each do |a,b|
