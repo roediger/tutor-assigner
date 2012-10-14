@@ -1,0 +1,4 @@
+Firstname Lastname firstname@example.com
+Another Tutor TheTutor@example.com
+This is a pretty obvious format email@example.com
+Everything is name, then an email address first@example.com
