@@ -138,30 +138,51 @@ class App < Sinatra::Base
     erb :manage
   end
   
+  # pairs.each do |a,b|
+  #   tutors.each do |tutor|
+  #     cplex+= " + [ 1000 t#{tutor.id}g#{a} * t#{tutor.id}g#{b} ]"
+  #   end
+  # end
+
   post '/manage/:id/:access_code/solve' do
     reg=Registration.first(:id => params[:id],:access_code => params[:access_code])
     raise unless reg
     
     groups=reg.groups
-    tutors=reg.tutors
+    tutors=reg.tutors    
     
-    cplex = "Maximize\n"
-    cplex+= " obj: - 1000000 slack1 "
-    
-    # Build objective function: add all variables while considering their weight
-    vars = tutors.product(groups).map { |var| { :tutor => var[0], :group => var[1], :pref => var[0].preferences.first(:group => var[1]) } }
-    vars.each do |var|
-      puts " #{var[:pref] ? var[:pref].weight : 0} #{var[:tutor].id} #{var[:group].id}" 
-    end
-    
-    tutors.each do |tutor|
-      groups.each do |group|
-        pref=tutor.preferences.first(:group => group)
-        weight=pref ? pref.weight : 0
-        
-        cplex+= " + #{weight} t#{tutor.id}g#{group.id}"
+    class Var
+      attr_accessor :tutors,:groups
+      
+      def initialize(tutors,groups)
+        @tutors=[tutors].flatten
+        @groups=[groups].flatten
+      end
+      
+      def prefs
+        tutors.map { |t,g| t.preferences.all(:group => groups) }.flatten.reject{ |p| p.nil? }
+      end
+      
+      def name
+        # XXX make this a unique auto increment counter in production
+        "t#{tutors.map{|t|t.id}.join("t")}g#{groups.map{|g|g.id}.join("g")}"
+      end
+      
+      def weight
+        if prefs.length == 0 || prefs.find{|p|p.weight==0} then 
+          0
+        else
+          (prefs.reduce(0.0) { |sum,p| sum+p.weight } / (prefs.length)).to_i
+        end
       end
     end
+    
+    cplex = "Maximize\n"
+    
+    # Build objective function: add all variables while considering their weight
+    vars = tutors.product(groups).map { |tutor,group| Var.new(tutor,group) }
+    vars.delete_if { |var| var.weight == 0 }
+    cplex+= " obj: -1000000 slack1 + " + vars.map { |var| "#{var.weight} #{var.name}" }.join(" + ") + "\n"
     
     # Add variables for consecutive groups
     pairs=[]
@@ -170,110 +191,69 @@ class App < Sinatra::Base
       pairs += lastCluster[:groups].product(groups) if lastCluster[:slot]+(2.0/24.0) == slot
       lastCluster={ :slot => slot, :groups => groups }
     end
-    
-    pairs.each do |a,b|
-      tutors.each do |tutor|
-        cplex+= " + [ 1000 t#{tutor.id}g#{a} * t#{tutor.id}g#{b} ]"
-      end
-    end
-    
-    cplex+= "\n"
+        
     cplex+= "Subject To\n"
         
-    # Do not allow groups where preference is 0
-    cplex+= " nozero:"
-    tutors.each do |tutor|
-      groups.each do |group|
-        pref=tutor.preferences.first(:group => group)
-        weight=pref ? pref.weight : 0
-        
-        if weight == 0 then
-          cplex+= " + t#{tutor.id}g#{group.id}"          
-        end
-      end
-    end    
-    cplex+=" = 0\n"
+    # Solve so that all groups are assigned, rest goes into an extremely expensive slack variable
+    cplex+= " all: "+vars.map { |var| var.name }.join(" + ") + " + slack1 = #{2*tutors.length}\n"
     
-    # Uber constraint
-    cplex+= " all:"
-    tutors.each do |tutor|
-      groups.each do |group|
-        cplex+= " + t#{tutor.id}g#{group.id}"
-      end    
-    end  
-    cplex+= " + slack1 = #{2*tutors.length}\n"
-
     # At most one tutor for each group
     groups.each do |group|
-      vars=[]
-      tutors.each do |tutor|
-        vars << "t#{tutor.id}g#{group.id}"
-      end
-      cplex += " g#{group.id}: " + vars.join(" + ")+" <= 1\n"      
+      groupVars=vars.find_all { |var| var.groups.find{ |g| g==group } }.map{ |var| var.name }
+      cplex+= " g#{group.id}: " + groupVars.join(" + ") + " <= 1\n" if groupVars.length > 0
     end
-    
-    # At most 2 groups per tutor
+        
+    # At most two groups per tutor
     tutors.each do |tutor|
-      vars=[]
-      groups.each do |group|
-        vars << "t#{tutor.id}g#{group.id}"
-      end
-      cplex += " t#{tutor.id}: " + vars.join(" + ")+" <= 2\n"
+      tutorVars=vars.find_all { |var| var.tutors.find{ |t| t==tutor } }.map{ |var| "#{var.groups.length} #{var.name}" }
+      cplex+= " t#{tutor.id}: " + tutorVars.join(" + ") + " <= 2\n" if tutorVars.length > 0
     end
     
-    # At most 1 group per tutor in the same time slot
-    slots={} ; groups.each { |group| (slots[group.when]||=[]) << group.id }
+    # Group by tutor, group by slot, <= 1
     slotIndex=0
-    slots.each do |slot,groupIndexes|
-      tutors.each do |tutor|
-        vars=[]
-        groupIndexes.each do |g|
-          vars << "t#{tutor.id}g#{g}"
-        end
-        cplex += " s#{slotIndex}t#{tutor.id}: " + vars.join(" + ") + " <= 1\n"
+    tutors.each do |tutor|
+      groups.group_by { |group| group.when }.each do |slot,groups|
+        # find all variables concerning the tutor and at least one of the mentioned groups
+        slotVars=vars.find_all { |var| var.tutors.find { |t| t == tutor } and var.groups.find { |g| groups.find { |g2| g2==g } } }
+        next unless slotVars.length > 1
+        cplex+= " s#{slotIndex}t#{tutor.id}: " + slotVars.map { |var| var.name }.join(" + ") + " <= 1\n"
+        slotIndex+=1
       end
-      slotIndex+=1
     end
     
-    vars=[]
-    tutors.each do |tutor|
-      groups.each do |group|
-        vars << "t#{tutor.id}g#{group.id}"
-      end
-    end    
-    cplex+="Binary\n"
-    cplex+=" "+vars.join(" ")+"\n"
-    
+    # Set all variables to binary
+    cplex+= "Binary " + vars.map { |var| var.name }.join(" ")+"\n"
+
     IO.write("out.lp",cplex)
+    out,solution,status=Open3.capture3("glpsol --lp /dev/stdin -o /dev/stderr",:stdin_data=>cplex)
+    IO.write("debug.sol",solution)
+    puts out
     
-    # out,solution,status=Open3.capture3("glpsol --lp /dev/stdin -o /dev/stderr",:stdin_data=>cplex)
-    # IO.write("debug.sol",solution)
-    # puts out
-    
-    out,err,status=Open3.capture3("gurobi_cl ResultFile=out.sol out.lp")
-    solution=IO.read("out.sol")
+    # out,err,status=Open3.capture3("gurobi_cl ResultFile=out.sol out.lp")
+    # solution=IO.read("out.sol")
+    # 
+    # result=Hash.new
+    # solution.split(/\n/).each do |line|
+    #   next unless line.match(/^t\d+.*?[\s\t]+1/)
+    #   
+    #   cols=line.split(/[\s\t]+/)
+    #   m=cols[0].match(/t(\d+)g(\d+)/)
+    #   t=m[1].to_i
+    #   g=m[2].to_i
+    #   result[Group.first(:id => g).name]=Tutor.first(:id => t).name
+    # end
+    # p result
 
     result=Hash.new
     solution.split(/\n/).each do |line|
-      next unless line.match(/^t\d+.*?[\s\t]+1/)
-      
       cols=line.split(/[\s\t]+/)
-      m=cols[0].match(/t(\d+)g(\d+)/)
-      t=m[1].to_i
-      g=m[2].to_i
-      result[Group.first(:id => g).name]=Tutor.first(:id => t).name
+      if cols[3]=="*" and cols[4]=="1"
+        m=cols[2].match(/t(\d+)g(\d+)/)
+        t=m[1].to_i
+        g=m[2].to_i
+        result[Group.first(:id => g).name]=Tutor.first(:id => t).name
+      end
     end
-    p result
-    
-    # solution.split(/\n/).each do |line|
-    #   cols=line.split(/[\s\t]+/)
-    #   if cols[3]=="*" and cols[4]=="1"
-    #     m=cols[2].match(/t(\d+)g(\d+)/)
-    #     t=m[1].to_i
-    #     g=m[2].to_i
-    #     result[Group.first(:id => g).name]=Tutor.first(:id => t).name
-    #   end
-    # end
     
     content_type :json
     JSON.generate(result)
