@@ -11,6 +11,8 @@ require 'data_mapper'
 require 'pony'
 require 'date'
 require 'open3'
+require 'singleton'
+
 
 require './config.rb'
 
@@ -21,7 +23,7 @@ class App < Sinatra::Base
   set :root, File.dirname(__FILE__)
   register Sinatra::AssetPack
   
-  DataMapper::Model.raise_on_save_failure = true
+  #DataMapper::Model.raise_on_save_failure = true
   #DataMapper::Logger.new(STDOUT, :debug)
   DataMapper.setup(:default,"sqlite://#{Dir.pwd}/assigner.db")
 
@@ -137,12 +139,6 @@ class App < Sinatra::Base
     @groups=JSON.generate(reg.groups)
     erb :manage
   end
-  
-  # pairs.each do |a,b|
-  #   tutors.each do |tutor|
-  #     cplex+= " + [ 1000 t#{tutor.id}g#{a} * t#{tutor.id}g#{b} ]"
-  #   end
-  # end
 
   post '/manage/:id/:access_code/solve' do
     reg=Registration.first(:id => params[:id],:access_code => params[:access_code])
@@ -150,6 +146,23 @@ class App < Sinatra::Base
     
     groups=reg.groups
     tutors=reg.tutors    
+    
+    class PrefCache
+      include Singleton
+      
+      def initialize 
+        prefs=Preference.all
+        @cache=Hash.new
+        prefs.each do |pref|
+          @cache["#{pref.tutor.id}-#{pref.group.id}"]=pref
+        end
+      end
+      
+      def get(tutor,group)
+        @cache["#{tutor.id}-#{group.id}"]
+      end
+    end
+
     
     class Var
       attr_accessor :tutors,:groups
@@ -160,7 +173,8 @@ class App < Sinatra::Base
       end
       
       def prefs
-        tutors.map { |t,g| t.preferences.all(:group => groups) }.flatten.reject{ |p| p.nil? }
+        tutors.map { |t| groups.map { |g| PrefCache.instance.get(t,g) } }.flatten.reject{ |p| p.nil? }
+        #tutors.map { |t,g| t.preferences.all(:group => groups) }.flatten.reject{ |p| p.nil? }
       end
       
       def name
@@ -169,33 +183,43 @@ class App < Sinatra::Base
       end
       
       def weight
-        if prefs.length == 0 || prefs.find{|p|p.weight==0} then 
+        if prefs.length < groups.length || prefs.find{|p|p.weight==0} then 
           0
         else
-          (prefs.reduce(0.0) { |sum,p| sum+p.weight } / (prefs.length)).to_i
+          (prefs.reduce(0.0) { |sum,p| sum+p.weight } / (prefs.length)).to_i * (groups.length>1 ? 1000 : 1)
         end
       end
     end
-    
+        
     cplex = "Maximize\n"
-    
+        
     # Build objective function: add all variables while considering their weight
     vars = tutors.product(groups).map { |tutor,group| Var.new(tutor,group) }
-    vars.delete_if { |var| var.weight == 0 }
-    cplex+= " obj: -1000000 slack1 + " + vars.map { |var| "#{var.weight} #{var.name}" }.join(" + ") + "\n"
     
-    # Add variables for consecutive groups
+    # Find all pairs of consecutive groups
     pairs=[]
     lastCluster={ :slot => DateTime.now, :groups => [] }
     groups.to_a.sort { |a,b| a.when<=>b.when }.chunk { |g| g.when }.each do |slot,groups|
       pairs += lastCluster[:groups].product(groups) if lastCluster[:slot]+(2.0/24.0) == slot
       lastCluster={ :slot => slot, :groups => groups }
+    end    
+    
+    pairs.each do |a,b|
+      puts "#{a.id} #{b.id} #{a.when} #{b.when}"
     end
-        
+    
+    # Add variables for pairs
+    tutors.each do |tutor|
+      vars += pairs.map { |groups| Var.new(tutor,groups)}
+    end
+    vars.delete_if { |var| var.weight == 0 }
+    
+    cplex+= " obj: -1000000 slack1 + " + vars.map { |var| "#{var.weight} #{var.name}" }.join(" + ") + "\n"
+                        
     cplex+= "Subject To\n"
         
     # Solve so that all groups are assigned, rest goes into an extremely expensive slack variable
-    cplex+= " all: "+vars.map { |var| var.name }.join(" + ") + " + slack1 = #{2*tutors.length}\n"
+    cplex+= " all: "+vars.map { |var| "#{var.groups.length} #{var.name}" }.join(" + ") + " + slack1 = #{2*tutors.length}\n"
     
     # At most one tutor for each group
     groups.each do |group|
@@ -224,34 +248,17 @@ class App < Sinatra::Base
     # Set all variables to binary
     cplex+= "Binary " + vars.map { |var| var.name }.join(" ")+"\n"
 
-    IO.write("out.lp",cplex)
-    out,solution,status=Open3.capture3("glpsol --lp /dev/stdin -o /dev/stderr",:stdin_data=>cplex)
-    IO.write("debug.sol",solution)
+    #IO.write("out.lp",cplex)
+    out,solution,status=Open3.capture3("time glpsol --lp /dev/stdin -o /dev/stderr",:stdin_data=>cplex)
+    #IO.write("debug.sol",solution)
     puts out
     
-    # out,err,status=Open3.capture3("gurobi_cl ResultFile=out.sol out.lp")
-    # solution=IO.read("out.sol")
-    # 
-    # result=Hash.new
-    # solution.split(/\n/).each do |line|
-    #   next unless line.match(/^t\d+.*?[\s\t]+1/)
-    #   
-    #   cols=line.split(/[\s\t]+/)
-    #   m=cols[0].match(/t(\d+)g(\d+)/)
-    #   t=m[1].to_i
-    #   g=m[2].to_i
-    #   result[Group.first(:id => g).name]=Tutor.first(:id => t).name
-    # end
-    # p result
-
     result=Hash.new
     solution.split(/\n/).each do |line|
       cols=line.split(/[\s\t]+/)
-      if cols[3]=="*" and cols[4]=="1"
-        m=cols[2].match(/t(\d+)g(\d+)/)
-        t=m[1].to_i
-        g=m[2].to_i
-        result[Group.first(:id => g).name]=Tutor.first(:id => t).name
+      if cols[4]=="1" then
+        var = vars.find { |v| v.name == cols[2] }
+        var.groups.each { |group| result[group.name]=var.tutors[0].name } if var         
       end
     end
     

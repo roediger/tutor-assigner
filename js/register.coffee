@@ -12,14 +12,16 @@ findGroups = (text) ->
     if line.match dayRegexp
       group.day=line
     else if line.match groupRegexp
+      group={}
       group.name=line
     else if m = line.match dateRegexp
       group.time=m[1]
           
-    if group.day&&group.name&&group.time
+    if group.day&&group.name&&group.time&&!group.pushed
       groups.push group 
-      group={}
+      group.pushed=true
     
+  console.log groups
   return groups
   
 findTutors = (text) ->
