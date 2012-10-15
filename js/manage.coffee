@@ -17,6 +17,7 @@ $("#solve").click ->
   $("#solve").button('loading')
   $.post window.location+'/solve', {}, (result)-> 
     console.log(result)
+    event.title='' for event in events
     for groupName,tutorName of result
       eventByName[groupName].title=tutorName
     $('#calendar').fullCalendar('refetchEvents');     
@@ -66,3 +67,17 @@ $("#calendar").fullCalendar
     week: 'ddd'
         
 $('#calendar').fullCalendar 'gotoDate',y,m-1,d
+
+$('form.countform > input').bind "change keydown", (e)-> 
+  id=$(e.target).parent().children('[name="id"]').val()
+  $(e.target).parent().parent().removeClass('alert-error')
+  $(e.target).parent().parent().addClass('alert-info')
+  $.post window.location+'/update',{
+    tutor_id: id, 
+    count: $(e.target).parent().children('[name="count"]').val(), 
+    consecutive: $(e.target).parent().children('[name="consecutive"]:checked').length==1 } ,->
+    $(e.target).parent().parent().removeClass('alert-info')
+  .error ->
+    $(e.target).parent().parent().removeClass('alert-info')
+    $(e.target).parent().parent().addClass('alert-error')
+  

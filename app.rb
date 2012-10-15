@@ -22,9 +22,10 @@ class App < Sinatra::Base
   set :port, 9999
   set :root, File.dirname(__FILE__)
   register Sinatra::AssetPack
-  
+
+
   #DataMapper::Model.raise_on_save_failure = true
-  #DataMapper::Logger.new(STDOUT, :debug)
+  DataMapper::Logger.new(STDOUT, :debug)
   DataMapper.setup(:default,"sqlite://#{Dir.pwd}/assigner.db")
 
   class Registration
@@ -63,6 +64,18 @@ class App < Sinatra::Base
     belongs_to :registration
     has n,:groups
     has n,:preferences
+    has 1,:meta_preference
+  end
+  
+  class MetaPreference
+    include DataMapper::Resource
+    property :id,Serial
+    property :priority, Integer, :default => 1
+    property :count, Integer, :default => 2
+    property :consecutive, Boolean, :default => true
+    #property :sameday, Boolean    
+    #property :sameslot, Boolean
+    belongs_to :tutor
   end
   
   class Preference
@@ -88,12 +101,7 @@ class App < Sinatra::Base
       js  :manage, [ '/js/vendor/fullcalendar.min.js','/js/manage.js' ]
   }
   
-  helpers do
-    def accessCode
-      ash(id)
-      Base64.encode64(id.to_s + "--" + Random.new.bytes(99))
-    end
-    
+  helpers do    
     def dayToInt(day)
       return 1 if day=="Mo"
       return 2 if day=="Di"
@@ -134,10 +142,26 @@ class App < Sinatra::Base
     raise unless reg
         
     @tutors=JSON.generate(reg.tutors.all.map { |t| 
-      t.attributes.merge({:gcount => t.preferences.all(:weight => 1).length}) 
+      t.attributes.merge({
+        :gcount => t.preferences.all(:weight => 1).length,
+        :meta_preference => t.meta_preference
+      })
     })
     @groups=JSON.generate(reg.groups)
     erb :manage
+  end
+
+  post '/manage/:id/:access_code/update' do
+    reg=Registration.first(:id => params[:id],:access_code => params[:access_code])
+    raise unless reg
+    
+    tutor=Tutor.first(:id=>params['tutor_id'])
+    tutor.meta_preference=MetaPreference.create unless tutor.meta_preference
+    tutor.meta_preference.count=params['count'].to_i
+    tutor.meta_preference.consecutive=params['consecutive']=="true"
+    tutor.save
+    
+    JSON.generate(tutor)
   end
 
   post '/manage/:id/:access_code/solve' do
@@ -204,13 +228,9 @@ class App < Sinatra::Base
       lastCluster={ :slot => slot, :groups => groups }
     end    
     
-    pairs.each do |a,b|
-      puts "#{a.id} #{b.id} #{a.when} #{b.when}"
-    end
-    
     # Add variables for pairs
     tutors.each do |tutor|
-      vars += pairs.map { |groups| Var.new(tutor,groups)}
+      vars += pairs.map { |groups| Var.new(tutor,groups)} if tutor.meta_preference && tutor.meta_preference.consecutive
     end
     vars.delete_if { |var| var.weight == 0 }
     
@@ -230,7 +250,7 @@ class App < Sinatra::Base
     # At most two groups per tutor
     tutors.each do |tutor|
       tutorVars=vars.find_all { |var| var.tutors.find{ |t| t==tutor } }.map{ |var| "#{var.groups.length} #{var.name}" }
-      cplex+= " t#{tutor.id}: " + tutorVars.join(" + ") + " <= 2\n" if tutorVars.length > 0
+      cplex+= " t#{tutor.id}: " + tutorVars.join(" + ") + " <= #{tutor.meta_preference.count||2}\n" if tutorVars.length > 0
     end
     
     # Group by tutor, group by slot, <= 1
@@ -248,9 +268,9 @@ class App < Sinatra::Base
     # Set all variables to binary
     cplex+= "Binary " + vars.map { |var| var.name }.join(" ")+"\n"
 
-    #IO.write("out.lp",cplex)
+    IO.write("debug.lp",cplex)
     out,solution,status=Open3.capture3("time glpsol --lp /dev/stdin -o /dev/stderr",:stdin_data=>cplex)
-    #IO.write("debug.sol",solution)
+    IO.write("debug.sol",solution)
     puts out
     
     result=Hash.new

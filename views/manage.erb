@@ -4,7 +4,7 @@
   var tutors=<%=@tutors%>;
   var groups=<%=@groups%>;
 </script>
-    
+
 <div class="container-fluid">
   
   <div class="row-fluid">
@@ -17,7 +17,7 @@
         <thead>
           <tr>
             <th> Name </th>
-            <th> Email </th>
+            <th> Meta </th>
             <th> Avail. Groups </th>
             <th> &nbsp; </th>
           </tr>
@@ -26,8 +26,14 @@
           {{#each tutors}}
           <tr>
             {{#with this}}
-            <td>{{name}}</td>
-            <td>{{email}}</td>
+            <td><a href="mailto:{{email}}">{{name}}</a></td>
+            <td>
+              <form class="countform form-inline" style="margin:0;">
+                <input type="hidden" name="id" value="{{id}}">
+                <span>Count: </span><input type="text" value="{{this.meta_preference.count}}" class="input-mini" name="count">
+                <span>Consecutive: </span><input type="checkbox" value="true" class="input-mini" name="consecutive"{{#if this.meta_preference.consecutive}} checked{{/if}}>
+              </form>
+            </td>
             <td>{{gcount}}</td>
             <td><a href="/vote/{{id}}/{{access_code}}">vote</a></td>
             {{/with}}

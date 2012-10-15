@@ -1,4 +1,5 @@
 *.db
+debug.*
 
 .DS_Store
 .AppleDouble
